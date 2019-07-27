@@ -13,11 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
         android:src="@drawable/border"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/loyaltyCounterGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -126,30 +126,92 @@
             android:textSize="19.5sp" />
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/loyaltyCounterGroup"
+        android:layout_width="174dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
+        app:constraint_referenced_ids="loyaltyPlusButton,loyaltyMinusButton,loyaltyButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="119dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="60dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/loyaltywing"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+    <ImageButton
+        android:id="@+id/loyaltyPlusButton"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerInside"
+        android:scaleX="-1"
+        android:src="@drawable/loyaltywingbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyButton"
+        app:layout_constraintStart_toStartOf="@+id/loyaltyButton" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="114dp"
-            android:layout_height="73dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/loyalty"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/loyaltyPlusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyPlusButton"
+        app:layout_constraintEnd_toEndOf="@+id/loyaltyPlusButton"
+        app:layout_constraintTop_toTopOf="@+id/loyaltyPlusButton" />
+
+    <ImageButton
+        android:id="@+id/loyaltyMinusButton"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/loyaltywingbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyButton"
+        app:layout_constraintEnd_toEndOf="@+id/loyaltyButton" />
+
+    <TextView
+        android:id="@+id/loyaltyMinusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="−"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyMinusButton"
+        app:layout_constraintStart_toStartOf="@+id/loyaltyMinusButton"
+        app:layout_constraintTop_toTopOf="@+id/loyaltyMinusButton" />
+
+    <ImageButton
+        android:id="@+id/loyaltyButton"
+        android:layout_width="95dp"
+        android:layout_height="59dp"
+        android:adjustViewBounds="true"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/loyaltybutton"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyCounterGroup"
+        app:layout_constraintEnd_toEndOf="@+id/loyaltyCounterGroup"
+        app:layout_constraintStart_toStartOf="@+id/loyaltyCounterGroup" />
+
+    <TextView
+        android:id="@+id/loyaltyText"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="8dp"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loyaltyButton"
+        app:layout_constraintEnd_toEndOf="@+id/loyaltyButton"
+        app:layout_constraintStart_toStartOf="@+id/loyaltyButton"
+        app:layout_constraintTop_toTopOf="@+id/loyaltyButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
