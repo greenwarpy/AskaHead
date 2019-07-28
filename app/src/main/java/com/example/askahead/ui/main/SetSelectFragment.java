@@ -1,6 +1,6 @@
 package com.example.askahead.ui.main;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -10,10 +10,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +46,18 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
         mActionBarToolbar.setTitle("Set Select");
         mActionBarToolbar.setOnMenuItemClickListener(this);
         mActionBarToolbar.inflateMenu(R.menu.settings_menu);
+
+       mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // back button pressed
+                ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
+                viewPager.setCurrentItem(1);
+
+            }
+        });
+
+
 
         // TODO: Use the ViewModel
     }

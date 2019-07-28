@@ -14,7 +14,8 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Set Select" />
+        app:title="Set Select"
+        app:navigationIcon="?attr/homeAsUpIndicator"/>
 
     <ImageView
         android:id="@+id/unstSelectBackgroundImageView"
