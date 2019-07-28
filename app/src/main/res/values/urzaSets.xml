@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="set0">Unstable</string>
+    <string name="set1">War of the Spark</string>
+
+    <array name="sets">
+        <item>@string/set0</item>
+        <item>@string/set1</item>
+    </array>
+
+    <string name="setDesc0">The original abilities from when Urza was printed in Unstable. They call back to planeswalker cards throughout Magics history.</string>
+    <string name="setDesc1">Released alongside War of the Spark, These abilities reference cards from the set and make use of the Amass mechanic.</string>
+
+    <array name="setDescriptions">
+        <item>@string/setDesc0</item>
+        <item>@string/setDesc1</item>
+    </array>
+
+</resources>

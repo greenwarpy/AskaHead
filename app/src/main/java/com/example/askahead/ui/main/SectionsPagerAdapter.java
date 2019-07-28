@@ -35,6 +35,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         if(position ==1){
             return AskFragment.newInstance();
         }
+        if(position ==2){
+            return SetSelectFragment.newInstance();
+        }
 
         return PlaceholderFragment.newInstance(position + 1);
     }

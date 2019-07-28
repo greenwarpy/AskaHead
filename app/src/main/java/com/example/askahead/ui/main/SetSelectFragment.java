@@ -1,7 +1,10 @@
 package com.example.askahead.ui.main;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,14 +12,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.askahead.R;
+import com.example.askahead.SettingsActivity;
 
-public class SetSelectFragment extends Fragment {
+public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemClickListener {
 
     private SetSelectViewModel mViewModel;
+    private Toolbar mActionBarToolbar;
 
     public static SetSelectFragment newInstance() {
         return new SetSelectFragment();
@@ -32,7 +40,23 @@ public class SetSelectFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(SetSelectViewModel.class);
+
+        //set up toolbar
+        mActionBarToolbar = (Toolbar) getActivity().findViewById(R.id.setSelectToolbar);
+        setHasOptionsMenu(true);
+        mActionBarToolbar.setTitle("Set Select");
+        mActionBarToolbar.setOnMenuItemClickListener(this);
+        mActionBarToolbar.inflateMenu(R.menu.settings_menu);
+
         // TODO: Use the ViewModel
     }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        Intent intent = new Intent(getActivity(), SettingsActivity.class);
+        startActivity(intent);
+        return true;
+    }
+
 
 }

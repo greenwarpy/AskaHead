@@ -7,38 +7,113 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.SetSelectFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/setSelectToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Set Select" />
+
     <ImageView
-        android:id="@+id/setSelectBackgroundImageView"
+        android:id="@+id/unstSelectBackgroundImageView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
         android:alpha="0.75"
         android:src="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/sparkCheckBox"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/setsparkcheckbox"
-        android:button="@null"
-        android:checked="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unstCheckBox" />
 
     <CheckBox
         android:id="@+id/unstCheckBox"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/setunstcheckbox"
         android:button="@null"
         android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@+id/unstSelectBackgroundImageView"
+        app:layout_constraintStart_toStartOf="@+id/unstSelectBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@+id/unstSelectBackgroundImageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/set0"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/unstCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/unstSelectBackgroundImageView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/setDesc0"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/unstSelectBackgroundImageView"
+        app:layout_constraintStart_toEndOf="@+id/unstCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/unstSelectBackgroundImageView2"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="0.75"
+        android:src="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/setSelectBackgroundImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/unstSelectBackgroundImageView" />
+
+    <CheckBox
+        android:id="@+id/sparkCheckBox"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/setsparkcheckbox"
+        android:button="@null"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@+id/unstSelectBackgroundImageView2"
+        app:layout_constraintStart_toStartOf="@+id/unstSelectBackgroundImageView2"
+        app:layout_constraintTop_toTopOf="@+id/unstSelectBackgroundImageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/set1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sparkCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/unstSelectBackgroundImageView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/setDesc1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/unstSelectBackgroundImageView2"
+        app:layout_constraintStart_toEndOf="@+id/sparkCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
