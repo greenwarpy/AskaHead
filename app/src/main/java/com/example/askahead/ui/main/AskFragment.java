@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.askahead.AbilityGenerator;
+import com.example.askahead.CustomFunction;
 import com.example.askahead.R;
 import com.example.askahead.TextLogDisplay;
 import com.example.askahead.TextTypingDisplay;
@@ -32,6 +33,11 @@ public class AskFragment extends Fragment {
     private TextTypingDisplay abilityOutput;
     private AbilityGenerator abilityGenerator;
     private TextLogDisplay abilityLog;
+
+    //variables for loyalty counter
+    final int defaultLoyalty = 4;
+    private int loyaltyCount = defaultLoyalty;
+    private TextView loyaltyCounterView;
 
 
     private boolean counterEnabled = false;
@@ -60,11 +66,17 @@ public class AskFragment extends Fragment {
         if(!counterEnabled){
             getActivity().findViewById(R.id.loyaltyCounterGroup).setVisibility(View.GONE);
         }
+        loyaltyCounterView = getActivity().findViewById(R.id.loyaltyText);
+
+        //Loyalty ability listeners
 
         //plus ability listener
         getActivity().findViewById(R.id.abilityPlusButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 activation(0);
+                if(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean("counterAutomatic",false)){
+                    changeLoyalty(+1);
+                }
             }
         });
 
@@ -72,6 +84,9 @@ public class AskFragment extends Fragment {
         getActivity().findViewById(R.id.abilityMinusButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 activation(1);
+                if(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean("counterAutomatic",false)){
+                    changeLoyalty(-1);
+                }
             }
         });
 
@@ -79,6 +94,9 @@ public class AskFragment extends Fragment {
         getActivity().findViewById(R.id.abilityUltButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 activation(2);
+                if(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean("counterAutomatic",false)){
+                    changeLoyalty(-6);
+                }
             }
         });
 
@@ -87,6 +105,24 @@ public class AskFragment extends Fragment {
             public void onClick(View v) {
                 ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
                 viewPager.setCurrentItem(0);
+            }
+        });
+
+        //Loyalty counter listeners
+
+        getActivity().findViewById(R.id.loyaltyPlusButton).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                changeLoyalty(+1);
+            }
+        });
+        getActivity().findViewById(R.id.loyaltyMinusButton).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                changeLoyalty(-1);
+            }
+        });
+        getActivity().findViewById(R.id.loyaltyButton).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                setLoyalty(defaultLoyalty);
             }
         });
     }
@@ -109,6 +145,15 @@ public class AskFragment extends Fragment {
 
 
 
+    }
+
+    private void changeLoyalty(int change){
+        setLoyalty(loyaltyCount + change);
+    }
+
+    private void setLoyalty(int val){
+        loyaltyCount = CustomFunction.bound(0,val,999);
+        loyaltyCounterView.setText(""+loyaltyCount);
     }
 
 

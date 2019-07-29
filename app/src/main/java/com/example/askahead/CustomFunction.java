@@ -14,6 +14,10 @@ public class CustomFunction {
         return result;
     }
 
+    public static int bound(int min, int val, int max){
+        return(Math.min(max,Math.max(min,val)));
+    }
+
 
 
 

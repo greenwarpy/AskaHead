@@ -202,16 +202,18 @@
 
     <TextView
         android:id="@+id/loyaltyText"
-        android:layout_width="41dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="4"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/loyaltyButton"
-        app:layout_constraintEnd_toEndOf="@+id/loyaltyButton"
-        app:layout_constraintStart_toStartOf="@+id/loyaltyButton"
+        app:layout_constraintEnd_toEndOf="@+id/loyaltyPlusText"
+        app:layout_constraintStart_toStartOf="@+id/loyaltyMinusText"
         app:layout_constraintTop_toTopOf="@+id/loyaltyButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
