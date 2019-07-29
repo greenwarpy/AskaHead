@@ -33,13 +33,14 @@
              />
 
     </PreferenceCategory>
-
+<!-- TODO dim screen and keep it on while in MainActivity
     <PreferenceCategory app:title="Screen">
         <SwitchPreferenceCompat
             app:key="screenOn"
             app:title="Keep the screen on while in use"
             app:defaultValue="false"/>
     </PreferenceCategory>
+-->
 
 <!--
     <PreferenceCategory app:title="@string/messages_header">

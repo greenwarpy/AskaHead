@@ -17,11 +17,13 @@ import android.widget.TextView;
 
 import com.example.askahead.AbilityGenerator;
 import com.example.askahead.R;
+import com.example.askahead.TextLogDisplay;
 import com.example.askahead.TextTypingDisplay;
 
 public class AskFragment extends Fragment {
 
     private AskViewModel mViewModel;
+    private LogViewModel logViewModel;
 
     public static AskFragment newInstance() {
         return new AskFragment();
@@ -29,6 +31,8 @@ public class AskFragment extends Fragment {
 
     private TextTypingDisplay abilityOutput;
     private AbilityGenerator abilityGenerator;
+    private TextLogDisplay abilityLog;
+
 
     private boolean counterEnabled = false;
 
@@ -42,11 +46,14 @@ public class AskFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(AskViewModel.class);
+        logViewModel = ViewModelProviders.of(getActivity()).get(LogViewModel.class);
         // TODO: Use the ViewModel
 
         TextView textBox = getActivity().findViewById(R.id.abilityOutputTextView);
         abilityOutput = new TextTypingDisplay(textBox);
         abilityGenerator = new AbilityGenerator(getContext());
+
+        abilityLog = logViewModel.getLog();
 
         //Hide loyalty counter if it is not enabled
         counterEnabled = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean("counterEnabled",false);
@@ -97,7 +104,10 @@ public class AskFragment extends Fragment {
         }else {
             //display ability
             abilityOutput.setText(ability, 1);
+            abilityLog.appendActivation(choice, ability);
         }
+
+
 
     }
 

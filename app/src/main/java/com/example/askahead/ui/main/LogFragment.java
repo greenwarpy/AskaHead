@@ -13,13 +13,17 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.askahead.R;
+import com.example.askahead.TextLogDisplay;
 
 public class LogFragment extends Fragment {
 
     private LogViewModel mViewModel;
     private Toolbar mActionBarToolbar;
+    private TextLogDisplay log;
+    private TextView output;
 
     public static LogFragment newInstance() {
         return new LogFragment();
@@ -34,13 +38,26 @@ public class LogFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(LogViewModel.class);
+        mViewModel = ViewModelProviders.of(getActivity()).get(LogViewModel.class);
+
+        log = mViewModel.getLog();
+        output = getActivity().findViewById(R.id.logTextView);
+        log.setDisplay(output);
+
 
 
         //set up toolbar
         mActionBarToolbar = getActivity().findViewById(R.id.logToolbar);
         setHasOptionsMenu(false);
         mActionBarToolbar.setTitle("Output Log");
+
+        getActivity().findViewById(R.id.clearLogButton).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                log.clearLog();
+                log.setDisplay(output);
+
+            }
+        });
 
         //back button sends user to middle fragment
         mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {

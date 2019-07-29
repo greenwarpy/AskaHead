@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.askahead.MyPreferenceManager;
 import com.example.askahead.R;
@@ -29,6 +31,7 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
 
     private MyPreferenceManager myPreferenceManager;
     private CheckBox[] boxes;
+    private ImageView[] backs;
 
     public static SetSelectFragment newInstance() {
         return new SetSelectFragment();
@@ -54,15 +57,28 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
 
         myPreferenceManager = new MyPreferenceManager(getContext());
         boxes = new CheckBox[]{getActivity().findViewById(R.id.setCheckBox0),getActivity().findViewById(R.id.setCheckBox1)};
+        backs = new ImageView[]{getActivity().findViewById(R.id.setBackImage0),getActivity().findViewById(R.id.setBackImage1)};
 
+        //set up each checkbox
         for(int i = 0; i <boxes.length;i++){
             final String key = "set"+ i + "enabled";
             final CheckBox box = boxes[i];
+            final ImageView back = backs[i];
             box.setChecked(myPreferenceManager.getBool(key));
+            if(box.isChecked()) {
+                back.setVisibility(View.VISIBLE);
+            }else{
+                back.setVisibility(View.INVISIBLE);
+            }
 
             boxes[i].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     myPreferenceManager.setBool(key,box.isChecked());
+                    if(box.isChecked()) {
+                        back.setVisibility(View.VISIBLE);
+                    }else{
+                        back.setVisibility(View.INVISIBLE);
+                    }
                 }
             });
         }
