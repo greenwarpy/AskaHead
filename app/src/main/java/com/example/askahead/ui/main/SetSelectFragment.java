@@ -16,7 +16,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
+import com.example.askahead.MyPreferenceManager;
 import com.example.askahead.R;
 import com.example.askahead.SettingsActivity;
 
@@ -24,6 +26,9 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
 
     private SetSelectViewModel mViewModel;
     private Toolbar mActionBarToolbar;
+
+    private MyPreferenceManager myPreferenceManager;
+    private CheckBox[] boxes;
 
     public static SetSelectFragment newInstance() {
         return new SetSelectFragment();
@@ -46,6 +51,22 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
         mActionBarToolbar.setTitle("Set Select");
         mActionBarToolbar.setOnMenuItemClickListener(this);
         mActionBarToolbar.inflateMenu(R.menu.settings_menu);
+
+        myPreferenceManager = new MyPreferenceManager(getContext());
+        boxes = new CheckBox[]{getActivity().findViewById(R.id.setCheckBox0),getActivity().findViewById(R.id.setCheckBox1)};
+
+        for(int i = 0; i <boxes.length;i++){
+            final String key = "set"+ i + "enabled";
+            final CheckBox box = boxes[i];
+            box.setChecked(myPreferenceManager.getBool(key));
+
+            boxes[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    myPreferenceManager.setBool(key,box.isChecked());
+                }
+            });
+        }
+
 
         //back button sends user to middle fragment
         mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="unstablePlus">
+        <item>Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.</item>
+        <item>Distribute three +1/+1 counters among one, two, or three target creatures you control.</item>
+        <item>Destroy target noncreature permanent.</item>
+        <item>Create two 3/1 red Elemental creature tokens with haste. Exile them at the beginning of the next end step.</item>
+        <item>Create three 1/1 white Soldier creature tokens.</item>
+        <item>Create a 3/3 black Beast creature token with deathtouch.</item>
+        <item>Reveal the top five cards of your library. Put all creature cards revealed this way into your hand and the rest on the bottom of your library in any order.</item>
+        <item>During target opponent\’s next turn, creatures that player controls attack Urza if able.</item>
+        <item>Put a loyalty counter on Urza for each creature target opponent controls.</item>
+        <item>Until your next turn, whenever a creature an opponent controls attacks, it gets -1/-0 until end of turn.</item>
+        <item>Target player exiles a card from his or her hand.</item>
+        <item>Reveal the top card of your library. If it\’s a land card, put it onto the battlefield. Otherwise, put it into your hand.</item>
+        <item>Target land you control becomes a 4/4 Elemental creature with trample. It\’s still a land.</item>
+        <item>Draw a card, then add one mana of any color to your mana pool.</item>
+        <item>Until end of turn, Urza becomes a legendary 4/4 red Dragon creature with flying, indestructible, and haste. (He doesn\’t lose loyalty while he\’s not a planeswalker.)</item>
+        <item>Until your next turn, creatures you control get +1/+0 and gain lifelink.</item>
+        <item>Look at the top five cards of your library. You may reveal an artifact card from among them and put it into your hand. Put the rest on the bottom of your library in any order.</item>
+        <item>Urza deals 3 damage to target creature or player.</item>
+        <item>Until your next turn,whenever a creature deals combat damage to Urza, destroy that creature.</item>
+        <item>Add X mana in any combination of colors to your mana pool, where X is the number of creatures you control.</item>
+    </string-array>
+    <string-array name="unstableMinus">
+        <item>Urza deals 3 damage to each creature.</item>
+        <item>Gain control of target creature.</item>
+        <item>Urza deals 4 damage to target creature or player and you gain 4 life.</item>
+        <item>Destroy target creature. You gain life equal to its toughness.</item>
+        <item>You get an emblem with \”Creatures you control get +1/+1.\”</item>
+        <item>You may put a creature card from your hand onto the battlefield.</item>
+        <item>Draw three cards, then put a card from your hand on top of your library.</item>
+        <item>Target player puts the top ten cards of his or her library into his or her graveyard.</item>
+        <item>Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other on the bottom of your library in any order.</item>
+        <item>Exile target permanent.</item>
+        <item>Reveal the top five cards of your library. You may put all creature cards and/or land cards from among them into your hand. Put the rest into your graveyard.</item>
+        <item>Search your library for a card and put that card into your hand. Then shuffle your library.</item>
+        <item>Target player sacrifices two creatures.</item>
+        <item>Create a 5/5 black Demon creature token with flying. You lose 2 life.</item>
+        <item>Create a 4/4 gold Dragon creature token with flying.</item>
+        <item>Target player\’s life total becomes 10.</item>
+        <item>Destroy target nonland permanent.</item>
+        <item>Return target permanent from a graveyard to the battlefield under your control.</item>
+        <item>Create two 3/3 green Beast creature tokens.</item>
+        <item>Draw four cards and discard two cards.</item>
+    </string-array>
+    <string-array name="unstableUlt">
+        <item>Urza deals 7 damage to target player. That player discards seven cards, then sacrifices seven permanents.</item>
+        <item>You get an emblem with \”If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.\”</item>
+        <item>Destroy all lands target player controls.</item>
+        <item>Create X 2/2 white Cat creature tokens, where X is your life total.</item>
+        <item>You gain 100 life.</item>
+        <item>Urza deals 10 damage to target player and each creature he or she controls.</item>
+        <item>You get an emblem with \”Creatures you control have double strike, trample, hexproof, and haste.\”</item>
+        <item>You get an emblem with \”Artifacts, creatures, enchantments, and lands you control have indestructible.\”</item>
+        <item>Create a 6/6 green Wurm creature token for each land you control.</item>
+        <item>Each player shuffles his or her hand and graveyard into his or her library. You draw seven cards.</item>
+        <item>Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.</item>
+        <item>You get an emblem with \”Whenever you cast a spell, exile target permanent.\”</item>
+        <item>You get an emblem with \”Whenever a creature enters the battlefield under your control, you may have it fight target creature.\” Then create three 8/8 blue Octopus creature tokens.</item>
+        <item>You control target player during that player\’s next turn.</item>
+        <item>Exile all cards from target player\’s library, then that player shuffles his or her hand into his or her library.</item>
+        <item>Create three 1/1 black Assassin creature tokens with \”Whenever this creature deals combat damage to a player, that player loses the game.\”</item>
+        <item>Put all creature cards from all graveyards onto the battlefield under your control.</item>
+        <item>You gain X life and draw X cards, where X is the number of lands you control.</item>
+        <item>Flip five coins. Take an extra turn after this one for each coin that comes up heads.</item>
+        <item>You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.</item>
+    </string-array>
+
+    <array name="unstable">
+        <item>@array/unstablePlus</item>
+        <item>@array/unstableMinus</item>
+        <item>@array/unstableUlt</item>
+    </array>
+
+    <string-array name="sparkPlus">
+        <item>Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.</item>
+        <item>You may exile target creature with power 4 or greater.</item>
+        <item>You may destroy target creature. If you do, its controller draws two cards.</item>
+        <item>You may have Urza, Academy Headmaster deal 6 damage to target tapped creature.</item>
+        <item>You may have target creature you control fight target creature you don\’t control.</item>
+        <item>Create two 0/3 white Wall creature tokens with defender.</item>
+        <item>Create a 2/2 blue Wizard creature token. Draw a card, then discard a card.</item>
+        <item>Create two 1/1 red Devil creature tokens with \”When this creature dies, it deals 1 damage to any target.\”</item>
+        <item>Create two 2/2 green Wolf creature tokens.</item>
+        <item>Amass 4. (Put four +1/+1 counters on an Army you control. If you don\’t control one, create a 0/0 black Zombie Army creature token first.)</item>
+        <item>Return target creature card with converted mana cost 4 or less from your graveyard to the battlefield. That creature is a Vampire in addition to its other types.</item>
+        <item>Look at the top four cards of your library. You may reveal a noncreature, nonland card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</item>
+        <item>Target player discards a card.</item>
+        <item>Look at the top three cards of your library. Exile one face down and put the rest on the bottom of your library in any order. For as long as it remains exiled, you may look at that card and you may cast it if it\’s a creature card.</item>
+        <item>Return up to one target artifact, creature, or enchantment to its owner\’s hand. Draw a card.</item>
+        <item>Return target card from your graveyard to your hand.</item>
+        <item>You may choose an artifact card you own from outside the game or in exile, reveal that card, and put it into your hand.</item>
+        <item>Until your next turn, prevent all damage that would be dealt to and dealt by target permanent an opponent controls.</item>
+        <item>You gain life equal to the greatest toughness among creatures you control.</item>
+        <item>When you cast your next instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.</item>
+
+    </string-array>
+    <string-array name="sparkMinus">
+        <item>You get an emblem with \”As long as it\’s your turn, each Urza planeswalker you control is a 4/4 Human Soldier creature with indestructible that\’s still a planeswalker\” and \”Prevent all damage that would be dealt to Urza planeswalkers you control during your turn.\”</item>
+        <item>You get an emblem with \”Spells your opponents cast that target a creature or planeswalker you control cost {2} more to cast.\”</item>
+        <item>You get an emblem with \”At the beginning of each opponent\’s upkeep, if that player has one or fewer cards in hand, they lose 2 life.\”</item>
+        <item>You get an emblem with \”Whenever an opponent draws a card, this emblem deals 1 damage to that player.\”</item>
+        <item>You get an emblem with \”Whenever a creature you control dies, draw a card.\”</item>
+        <item>Choose a color. You get an emblem with \”If a source you control of the chosen color would deal damage to a permanent or player, it deals that much damage plus 1 to that permanent or player instead.\”</item>
+        <item>You get an emblem with \”Whenever one or more loyalty counters are removed from an Urza planeswalker you control, he deals that much damage to target opponent or planeswalker.\”</item>
+        <item>You get an emblem with \”You may cast creature spells as though they had flash.\”</item>
+        <item>You get an emblem with \”Artifact, instant, and sorcery spells your opponents cast cost {1} more to cast.\”</item>
+        <item>You get an emblem with \”Creatures you control have menace.\”</item>
+        <item>You get an emblem with \”Creatures you control have haste.\”</item>
+        <item>You get an emblem with \”Whenever you cast a noncreature spell, create a 1/1 colorless Servo creature token.\”</item>
+        <item>You get an emblem with \”As long as it\’s your turn, creatures you control have first strike and equip abilities you activate cost {1} less to activate.\”</item>
+        <item>You get an emblem with \”Whenever a creature with power 4 or greater enters the battlefield under your control, draw a card.\”</item>
+        <item>You get an emblem with \”Creatures you control get +1/+0.\”</item>
+        <item>You get an emblem with \”Creatures you control have vigilance.\”</item>
+        <item>You get an emblem with \”As long as it\’s your turn, creatures and planeswalkers you control have lifelink.\”</item>
+        <item>You get an emblem with \”Whenever you cast or copy an instant or sorcery spell, this emblem deals 1 damage to target opponent or planeswalker.\”</item>
+        <item>You get an emblem with \”Urza planeswalkers you control have all loyalty abilities of all planeswalkers on the battlefield.\”</item>
+        <item>Choose a basic land type. You get an emblem with \”Whenever you tap a land of the chosen type for mana, add one mana of any type that land produced.\”</item>
+    </string-array>
+    <string-array name="sparkUlt">
+        <item>Draw seven cards. Then if your library has no cards in it, you win the game.</item>
+        <item>Each opponent chooses a permanent they control of each permanent type and sacrifices the rest.</item>
+        <item>Each opponent who doesn\’t control a legendary creature or planeswalker loses the game.</item>
+        <item>Create two 4/4 white Angel creature tokens with flying and vigilance. Those tokens gain haste until end of turn.</item>
+        <item>Create a token that\’s a copy of a creature or planeswalker you control, except it enters with an additional +1/+1 counter on it if it\’s a creature, it enters with an additional loyalty counter on it if it\’s a planesawlker, and it isn\’t legendary if that permanent is legendary.</item>
+        <item>Draw two cards, then amass X, where X is the number of cards in your hand. (Put X +1/+1 counters on an Army you control. If you don\’t control one, create a 0/0 black Zombie Army creature token first.)</item>
+        <item>You get an emblem with \”At the beginning of your upkeep, you lose 1 life and amass 1.\” and \”Whenever a Zombie token you control with power 6 or greater attacks, it gains lifelink until end of turn.\” (To amass 1, put a +1/+1 counter on an Army you control. If you don\’t control one, create a 0/0 black Zombie Army creature token first.)</item>
+        <item>Return up to four target cards from your graveyard to your hand.</item>
+        <item>Destroy any number of target planeswalkers. Choose a planeswalker you control. Put two loyalty counters on it for each planeswalker destroyed this way.</item>
+        <item>Choose any number of target creature and/or planeswalker cards in graveyards. Urza, Academy Headmaster deals damage to you equal to the total converted mana cost of those cards. Put them onto the battlefield under your control.</item>
+        <item>Put nine +1/+1 counters on target land you control. It becomes a legendary 0/0 Elemental creature with haste named Vitu-Ghazi. It\’s still a land.</item>
+        <item>Choose four. You may choose the same mode more than once.\n
+            • Create a 2/2 Citizen creature token that\’s all colors.\n
+            • Return target permanent card from your graveyard to your hand.\n
+            • Proliferate.\n
+            • You gain 4 life.</item>
+        <item>You get an emblem with \”{X}, Discard a card: Look at the top X cards of your library. You may put a creature card with converted mana cost X or less from among them onto the battlefield. Put the rest on the bottom of your library in a random order.\”</item>
+        <item>Return a creature you control to its owner\’s hand, then destroy all creatures.</item>
+        <item>Urza, Academy Headmaster deals 4 damage to target creature and you gain life equal to the damage dealt this way. Target player puts the top four cards of their library into their graveyard. Amass 4. (Put four +1/+1 counters on an Army you control. If you don\’t control one, create a 0/0 black Zombie Army creature token first.)</item>
+        <item>Amass 2, then the Army you amassed deals damage equal to its power to each non-Army creature. (To amass 2, put two +1/+1 counters on an Army you control. If you don\’t control one, create a 0/0 black Zombie Army creature token first.)</item>
+        <item>Urza, Academy Headmaster deals 3 damage to any target and you gain 3 life. You get an emblem with \”Whenever an opponent attacks a planeswalker you control with one or more creatures, this emblem deals 2 damage to that player and you gain 2 life.\”</item>
+        <item>Choose one or more.\n
+            • Destroy target artifact.\n
+            • Destroy target creature.\n
+            • Destroy target enchantment.\n
+            • Destroy target land.\n
+            • Destroy target planeswalker.</item>
+        <item>Each creature deals damage to itself equal to its power.</item>
+        <item>Reveal the top ten cards of your library. For each color pair, choose a card that\’s exactly those colors from among them. Put the chosen cards into your hand and the rest on the bottom of your library in a random order.</item>
+    </string-array>
+
+    <array name="spark">
+        <item>@array/sparkPlus</item>
+        <item>@array/sparkMinus</item>
+        <item>@array/sparkUlt</item>
+    </array>
+
+    <array name="abilities">
+        <item>@array/unstable</item>
+        <item>@array/spark</item>
+    </array>
+
+
+
+
+</resources>

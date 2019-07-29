@@ -21,8 +21,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ScrollView
+        android:id="@+id/abilityScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:soundEffectsEnabled="false"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toBottomOf="@+id/outputFrameImageView"
+        app:layout_constraintEnd_toEndOf="@+id/outputFrameImageView"
+        app:layout_constraintStart_toEndOf="@+id/abilityMinusButton"
+        app:layout_constraintTop_toTopOf="@+id/outputFrameImageView">
+
+        <TextView
+            android:id="@+id/abilityOutputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='"Whether fighting Phyrexians, founding the Tolarian Academy, or just enjoying retirement, Urza always kept his head."'
+            android:textColor="@android:color/white"
+            android:textSize="19.5sp" />
+    </ScrollView>
+
     <ImageButton
-        android:id="@+id/plusButton"
+        android:id="@+id/abilityPlusButton"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -31,7 +56,7 @@
         android:scaleType="centerInside"
         android:scaleY="-1"
         android:src="@drawable/downbutton"
-        app:layout_constraintBottom_toTopOf="@+id/minusButton"
+        app:layout_constraintBottom_toTopOf="@+id/abilityMinusButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/outputFrameImageView" />
 
@@ -43,14 +68,14 @@
         android:text="+1"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/plusButton"
-        app:layout_constraintEnd_toEndOf="@+id/plusButton"
+        app:layout_constraintBottom_toBottomOf="@+id/abilityPlusButton"
+        app:layout_constraintEnd_toEndOf="@+id/abilityPlusButton"
         app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="@+id/plusButton"
-        app:layout_constraintTop_toTopOf="@+id/plusButton" />
+        app:layout_constraintStart_toStartOf="@+id/abilityPlusButton"
+        app:layout_constraintTop_toTopOf="@+id/abilityPlusButton" />
 
     <ImageButton
-        android:id="@+id/minusButton"
+        android:id="@+id/abilityMinusButton"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -69,14 +94,14 @@
         android:text="−1"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/minusButton"
-        app:layout_constraintEnd_toEndOf="@+id/minusButton"
+        app:layout_constraintBottom_toBottomOf="@+id/abilityMinusButton"
+        app:layout_constraintEnd_toEndOf="@+id/abilityMinusButton"
         app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="@+id/minusButton"
-        app:layout_constraintTop_toTopOf="@+id/minusButton" />
+        app:layout_constraintStart_toStartOf="@+id/abilityMinusButton"
+        app:layout_constraintTop_toTopOf="@+id/abilityMinusButton" />
 
     <ImageButton
-        android:id="@+id/ultButton"
+        android:id="@+id/abilityUltButton"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -86,45 +111,20 @@
         android:src="@drawable/downbutton"
         app:layout_constraintBottom_toBottomOf="@+id/outputFrameImageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minusButton" />
+        app:layout_constraintTop_toBottomOf="@+id/abilityMinusButton" />
 
     <TextView
-        android:id="@+id/minusText2"
+        android:id="@+id/ultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="−6"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ultButton"
-        app:layout_constraintEnd_toEndOf="@+id/ultButton"
+        app:layout_constraintBottom_toBottomOf="@+id/abilityUltButton"
+        app:layout_constraintEnd_toEndOf="@+id/abilityUltButton"
         app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="@+id/ultButton"
-        app:layout_constraintTop_toTopOf="@+id/ultButton" />
-
-    <ScrollView
-        android:id="@+id/abilityScrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:scrollbarThumbVertical="@color/colorPrimary"
-        android:soundEffectsEnabled="false"
-        android:verticalScrollbarPosition="right"
-        app:layout_constraintBottom_toBottomOf="@+id/outputFrameImageView"
-        app:layout_constraintEnd_toEndOf="@+id/outputFrameImageView"
-        app:layout_constraintStart_toEndOf="@+id/minusButton"
-        app:layout_constraintTop_toTopOf="@+id/outputFrameImageView">
-
-        <TextView
-            android:id="@+id/abilityTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Urza, Academy Headmaster deals 4 damage to target creature and you gain life equal to the damage dealt this way. Target player puts the top four cards of their library into their graveyard. Amass 4. (Put four +1/+1 counters on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first.)"
-            android:textColor="@android:color/white"
-            android:textSize="19.5sp" />
-    </ScrollView>
+        app:layout_constraintStart_toStartOf="@+id/abilityUltButton"
+        app:layout_constraintTop_toTopOf="@+id/abilityUltButton" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/loyaltyCounterGroup"
