@@ -13,22 +13,47 @@
         android:layout_height="0dp"
         android:alpha="0.75"
         android:src="@android:color/black"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logToolbar" />
+
+    <ImageView
+        android:id="@+id/borderImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/goldrectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/logScrollView"
+        app:layout_constraintEnd_toEndOf="@+id/logScrollView"
+        app:layout_constraintStart_toStartOf="@+id/logScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/logToolbar"
+        app:srcCompat="@drawable/goldrectangle" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/logToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Output Log" />
 
     <ScrollView
         android:id="@+id/logScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:padding="20dp"
         android:paddingBottom="0dp"
         app:layout_constraintBottom_toTopOf="@+id/clearLogButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logBackgroundImageView">
+        app:layout_constraintTop_toBottomOf="@+id/logToolbar">
 
         <TextView
             android:id="@+id/logTextView"
@@ -42,27 +67,14 @@
         android:id="@+id/clearLogButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Clear Log"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/borderImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/whiterectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/logScrollView"
-        app:layout_constraintEnd_toEndOf="@+id/logScrollView"
-        app:layout_constraintStart_toStartOf="@+id/logScrollView"
-        app:layout_constraintTop_toTopOf="@+id/logScrollView"
-        app:srcCompat="@drawable/whiterectangle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

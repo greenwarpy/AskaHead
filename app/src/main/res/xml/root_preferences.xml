@@ -27,9 +27,9 @@
         <SwitchPreferenceCompat
             app:dependency="counterEnabled"
             app:key="counterAutomatic"
-            app:title="Update loyalty counter upon activation"
+            app:title="Automatic update"
             app:summaryOff="Loyalty counter must be updated manually"
-            app:summaryOn="Loyalty counter will update when an ability is activated"
+            app:summaryOn="Loyalty counter will update whenever an ability is activated"
              />
 
     </PreferenceCategory>

@@ -41,13 +41,14 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
         mViewModel = ViewModelProviders.of(this).get(SetSelectViewModel.class);
 
         //set up toolbar
-        mActionBarToolbar = (Toolbar) getActivity().findViewById(R.id.setSelectToolbar);
+        mActionBarToolbar = getActivity().findViewById(R.id.setSelectToolbar);
         setHasOptionsMenu(true);
         mActionBarToolbar.setTitle("Set Select");
         mActionBarToolbar.setOnMenuItemClickListener(this);
         mActionBarToolbar.inflateMenu(R.menu.settings_menu);
 
-       mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        //back button sends user to middle fragment
+        mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // back button pressed
@@ -56,9 +57,6 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
 
             }
         });
-
-
-
         // TODO: Use the ViewModel
     }
 

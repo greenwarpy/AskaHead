@@ -8,7 +8,7 @@
         android:drawable="@drawable/setsparkwhite"/>
     <item
         android:state_checked="true"
-        android:drawable="@drawable/setsparkgold"/>
+        android:drawable="@drawable/setsparkgold" />
     <item
         android:drawable="@drawable/setsparkblack"/>
 

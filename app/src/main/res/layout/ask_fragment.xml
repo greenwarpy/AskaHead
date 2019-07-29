@@ -109,7 +109,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:scrollbarThumbVertical="@android:color/white"
+        android:scrollbarThumbVertical="@color/colorPrimary"
         android:soundEffectsEnabled="false"
         android:verticalScrollbarPosition="right"
         app:layout_constraintBottom_toBottomOf="@+id/outputFrameImageView"
