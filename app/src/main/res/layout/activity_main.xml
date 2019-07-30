@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/urza" />
+        app:srcCompat="@drawable/urza"
+        android:contentDescription="background image for MainActivity featuring the art from urza, academy headmaster"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

@@ -16,9 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gmail.greenwarpy.askahead.AbilityGenerator;
-import com.gmail.greenwarpy.askahead.ui.main.AskViewModel;
 import com.gmail.greenwarpy.askahead.CustomFunction;
-import com.gmail.greenwarpy.askahead.ui.main.LogViewModel;
 import com.gmail.greenwarpy.askahead.TextLogDisplay;
 import com.gmail.greenwarpy.askahead.TextTypingDisplay;
 import com.gmail.greenwarpy.askahead.R;
@@ -174,7 +172,8 @@ public class AskFragment extends Fragment {
 
     private void setLoyalty(int val){
         loyaltyCount = CustomFunction.bound(0,val,999);
-        loyaltyCounterView.setText(""+loyaltyCount);
+        String newText = String.valueOf(loyaltyCount);
+        loyaltyCounterView.setText(newText);
     }
 
 

@@ -11,11 +11,13 @@ public class MyPreferenceManager {
     public MyPreferenceManager(Context context){
         sharedpreferences = context.getSharedPreferences("SaveFile", Context.MODE_PRIVATE);
         preferenceEditor = sharedpreferences.edit();
+        preferenceEditor.apply();
     }
 
     public MyPreferenceManager(SharedPreferences prefs){
         sharedpreferences = prefs;
         preferenceEditor = sharedpreferences.edit();
+        preferenceEditor.apply();
     }
 
     public boolean getBool(String key){

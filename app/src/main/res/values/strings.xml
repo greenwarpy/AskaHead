@@ -5,25 +5,20 @@
     <string name="tab_text_3">Set Select</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_settings">Settings</string>
 
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="flavor_text">Whether fighting Phyrexians, founding the Tolarian Academy, or just enjoying retirement, Urza always kept his head.</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-
+    <string name="ability_plus">+1</string>
+    <string name="ability_minus">−1</string>
+    <string name="ability_ult">−6</string>
+    <string name="counter_plus">+</string>
+    <string name="counter_minus">−</string>
+    <string name="counter_value">4</string>
+    <string name="log_tab">Log</string>
+    <string name="set_tab">Sets</string>
+    <string name="clear_log_button">Clear Log</string>
+    <string name="settings">Settings</string>
 
 
 </resources>

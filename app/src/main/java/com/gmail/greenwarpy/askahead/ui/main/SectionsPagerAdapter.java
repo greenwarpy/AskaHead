@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.gmail.greenwarpy.askahead.R;
-import com.gmail.greenwarpy.askahead.ui.main.LogFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

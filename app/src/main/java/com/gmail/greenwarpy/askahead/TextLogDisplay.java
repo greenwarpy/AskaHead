@@ -11,7 +11,7 @@ public class TextLogDisplay {
     private TextView textBox;
     private String log;
 
-    final private String abilTypes[] = {"+1","-1","-6"};
+    final private String[] abilTypes = {"+1", "-1", "-6"};
 
     public TextLogDisplay(){
         Date d = new Date();
