@@ -10,6 +10,6 @@
         android:state_checked="true"
         android:drawable="@drawable/setunstgold"/>
     <item
-        android:drawable="@drawable/setunstblack"/>
+        android:drawable="@drawable/setunstwhite"/>
 
 </selector>

@@ -10,6 +10,6 @@
         android:state_checked="true"
         android:drawable="@drawable/setsparkgold" />
     <item
-        android:drawable="@drawable/setsparkblack"/>
+        android:drawable="@drawable/setsparkwhite"/>
 
 </selector>

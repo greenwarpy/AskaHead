@@ -26,12 +26,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/goldrectangle"
+        android:src="@drawable/goldrectangleblacktransp"
         app:layout_constraintBottom_toBottomOf="@+id/logScrollView"
         app:layout_constraintEnd_toEndOf="@+id/logScrollView"
         app:layout_constraintStart_toStartOf="@+id/logScrollView"
         app:layout_constraintTop_toBottomOf="@+id/logToolbar"
-        app:srcCompat="@drawable/goldrectangle" />
+        app:srcCompat="@drawable/goldrectangleblacktransp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/logToolbar"

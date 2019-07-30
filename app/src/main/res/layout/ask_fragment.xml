@@ -50,7 +50,7 @@
         android:id="@+id/abilityPlusButton"
         android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:background="?android:selectableItemBackground"
         android:scaleType="centerInside"
@@ -232,7 +232,7 @@
             android:id="@+id/logTabImage"
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
-            android:src="@drawable/roundedrectangle"
+            android:src="@drawable/roundedcorner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -242,7 +242,7 @@
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
             android:scaleX="-1"
-            android:src="@drawable/roundedrectangle"
+            android:src="@drawable/roundedcorner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

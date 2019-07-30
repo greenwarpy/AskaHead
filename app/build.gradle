@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.example.askahead"
+        applicationId "com.example.com.gmail.greenwarpy.com.example.greenwarpy.com.gmail.greenwarpy.askahead"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
