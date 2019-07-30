@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,8 +69,9 @@ public class AskFragment extends Fragment {
         }
         loyaltyCounterView = getActivity().findViewById(R.id.loyaltyText);
 
-        //Loyalty ability listeners
+        //Set up listeners for buttons
 
+        //Loyalty ability listeners
         //plus ability listener
         getActivity().findViewById(R.id.abilityPlusButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -109,22 +111,40 @@ public class AskFragment extends Fragment {
         });
 
         //Loyalty counter listeners
-
+        //+ button
         getActivity().findViewById(R.id.loyaltyPlusButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 changeLoyalty(+1);
             }
         });
+        //- button
         getActivity().findViewById(R.id.loyaltyMinusButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 changeLoyalty(-1);
             }
         });
+        //loyalty counter button
+        //reset loyalty counter
         getActivity().findViewById(R.id.loyaltyButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setLoyalty(defaultLoyalty);
             }
         });
+
+        getActivity().findViewById(R.id.logTabImage).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
+                viewPager.setCurrentItem(0);
+            }
+        });
+
+        getActivity().findViewById(R.id.setTabImage).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
+                viewPager.setCurrentItem(2);
+            }
+        });
+
     }
 
     //function to handle ability activations, fetches ability then displays it
@@ -138,7 +158,7 @@ public class AskFragment extends Fragment {
             ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
             viewPager.setCurrentItem(2);
         }else {
-            //display ability
+
             abilityOutput.setText(ability, 1);
             abilityLog.appendActivation(choice, ability);
         }

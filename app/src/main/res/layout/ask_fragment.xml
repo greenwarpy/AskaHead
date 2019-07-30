@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text='"Whether fighting Phyrexians, founding the Tolarian Academy, or just enjoying retirement, Urza always kept his head."'
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="19.5sp" />
     </ScrollView>
 
@@ -132,9 +132,8 @@
     <androidx.constraintlayout.widget.Group
         android:id="@+id/loyaltyCounterGroup"
         android:layout_width="174dp"
-        android:layout_height="37dp"
+        android:layout_height="34dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="1dp"
         app:constraint_referenced_ids="loyaltyPlusButton,loyaltyMinusButton,loyaltyButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,7 +144,7 @@
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:adjustViewBounds="true"
         android:background="?android:selectableItemBackground"
         android:scaleType="centerInside"
@@ -170,11 +169,11 @@
         android:id="@+id/loyaltyMinusButton"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="48dp"
         android:adjustViewBounds="true"
         android:background="?android:selectableItemBackground"
         android:scaleType="centerInside"
+        android:scaleY="-1"
         android:src="@drawable/loyaltywingbutton"
         app:layout_constraintBottom_toBottomOf="@+id/loyaltyButton"
         app:layout_constraintEnd_toEndOf="@+id/loyaltyButton" />
@@ -184,6 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
         android:text="−"
         android:textColor="@android:color/white"
         android:textSize="36sp"
@@ -218,5 +218,62 @@
         app:layout_constraintEnd_toEndOf="@+id/loyaltyPlusText"
         app:layout_constraintStart_toStartOf="@+id/loyaltyMinusText"
         app:layout_constraintTop_toTopOf="@+id/loyaltyButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logTabImage"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:src="@drawable/roundedrectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/setTabImage"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:scaleX="-1"
+            android:src="@drawable/roundedrectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/logTabTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Log"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/logTabImage"
+            app:layout_constraintStart_toStartOf="@+id/logTabImage"
+            app:layout_constraintTop_toTopOf="@+id/logTabImage" />
+
+        <TextView
+            android:id="@+id/logTabTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Sets"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/setTabImage"
+            app:layout_constraintEnd_toEndOf="@+id/setTabImage"
+            app:layout_constraintStart_toStartOf="@+id/setTabImage"
+            app:layout_constraintTop_toTopOf="@+id/setTabImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
