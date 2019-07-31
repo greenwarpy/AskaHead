@@ -28,18 +28,18 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
+
         if(position ==0){
+            //log
             return LogFragment.newInstance();
         }
+
         if(position ==1){
+            //ask urza main page
             return AskFragment.newInstance();
         }
-        if(position ==2){
-            return SetSelectFragment.newInstance();
-        }
-
-        return PlaceholderFragment.newInstance(position + 1);
+        //set select
+        return SetSelectFragment.newInstance();
     }
 
     @Nullable

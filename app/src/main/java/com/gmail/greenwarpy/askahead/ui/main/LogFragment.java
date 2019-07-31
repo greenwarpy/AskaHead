@@ -15,11 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import com.gmail.greenwarpy.askahead.R;
 import com.gmail.greenwarpy.askahead.TextLogDisplay;
-import com.gmail.greenwarpy.askahead.ui.main.LogViewModel;
 
+/**
+ * Fragment for displaying and resetting an Ability log
+ */
 public class LogFragment extends Fragment {
 
     private LogViewModel mViewModel;
@@ -42,22 +43,21 @@ public class LogFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(getActivity()).get(LogViewModel.class);
 
+        //fetch log from mViewModel
         log = mViewModel.getLog();
         output = getActivity().findViewById(R.id.logTextView);
         log.setDisplay(output);
 
-
-
         //set up toolbar
         mActionBarToolbar = getActivity().findViewById(R.id.logToolbar);
         setHasOptionsMenu(false);
-        mActionBarToolbar.setTitle("Output Log");
+        mActionBarToolbar.setTitle("Ability Log");
 
+        //set up listener for clear button
         getActivity().findViewById(R.id.clearLogButton).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 log.clearLog();
                 log.setDisplay(output);
-
             }
         });
 
@@ -71,7 +71,5 @@ public class LogFragment extends Fragment {
 
             }
         });
-        // TODO: Use the ViewModel
     }
-
 }

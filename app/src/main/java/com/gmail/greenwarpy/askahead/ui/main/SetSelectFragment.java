@@ -23,13 +23,19 @@ import com.gmail.greenwarpy.askahead.MyPreferenceManager;
 import com.gmail.greenwarpy.askahead.R;
 import com.gmail.greenwarpy.askahead.SettingsActivity;
 
+/**
+ * Fragment responsible for allowing users to choose which sets of abilities.
+ * Saves using preferences
+ */
 public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemClickListener {
 
     private SetSelectViewModel mViewModel;
     private Toolbar mActionBarToolbar;
 
     private MyPreferenceManager myPreferenceManager;
+    //Checkboxes
     private CheckBox[] boxes;
+    //Background squares for checkboxes
     private ImageView[] backs;
 
     public static SetSelectFragment newInstance() {
@@ -54,6 +60,7 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
         mActionBarToolbar.setOnMenuItemClickListener(this);
         mActionBarToolbar.inflateMenu(R.menu.settings_menu);
 
+        //initialise preferenceManager and checkbox arrays
         myPreferenceManager = new MyPreferenceManager(getContext());
         boxes = new CheckBox[]{getActivity().findViewById(R.id.setCheckBox0),getActivity().findViewById(R.id.setCheckBox1)};
         backs = new ImageView[]{getActivity().findViewById(R.id.setBackImage0),getActivity().findViewById(R.id.setBackImage1)};
@@ -63,6 +70,8 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
             final String key = "set"+ i + "enabled";
             final CheckBox box = boxes[i];
             final ImageView back = backs[i];
+
+            //set checkbox to bool saved in preferences, and set back square to match
             box.setChecked(myPreferenceManager.getBool(key));
             if(box.isChecked()) {
                 back.setVisibility(View.VISIBLE);
@@ -70,9 +79,12 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
                 back.setVisibility(View.INVISIBLE);
             }
 
+            //set up listener for checkboxes
             boxes[i].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+                    //Update preference for set
                     myPreferenceManager.setBool(key,box.isChecked());
+                    //change back to visible when box is checked
                     if(box.isChecked()) {
                         back.setVisibility(View.VISIBLE);
                     }else{
@@ -96,6 +108,7 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
         // TODO: Use the ViewModel
     }
 
+    //opens settings activity
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         Intent intent = new Intent(getActivity(), SettingsActivity.class);

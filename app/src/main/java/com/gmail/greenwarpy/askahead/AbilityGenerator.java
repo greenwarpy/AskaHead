@@ -6,6 +6,9 @@ import android.content.res.TypedArray;
 
 import java.util.Random;
 
+/**
+ * Selects a random abilities from those listed in UrzaAbilities.xml
+ */
 public class AbilityGenerator {
 
     //preference manager object to handle persistent settings

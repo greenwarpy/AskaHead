@@ -3,6 +3,9 @@ package com.gmail.greenwarpy.askahead;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+/**
+ * class to slightly simplify writing to and reading preferences
+ */
 public class MyPreferenceManager {
 
     private SharedPreferences sharedpreferences;
@@ -20,10 +23,12 @@ public class MyPreferenceManager {
         preferenceEditor.apply();
     }
 
+    //get bool for key
     public boolean getBool(String key){
         return sharedpreferences.getBoolean(key, false);
     }
 
+    //get set bool for key
     public void setBool(String key, boolean bool){
         preferenceEditor.putBoolean(key, bool);
         preferenceEditor.commit();

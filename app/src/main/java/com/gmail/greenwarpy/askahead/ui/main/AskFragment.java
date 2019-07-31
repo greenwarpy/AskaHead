@@ -21,17 +21,25 @@ import com.gmail.greenwarpy.askahead.TextLogDisplay;
 import com.gmail.greenwarpy.askahead.TextTypingDisplay;
 import com.gmail.greenwarpy.askahead.R;
 
+
+/**
+ * The central fragment of the app
+ * users use buttons to display the random abilities of Urza Academy Headmaster
+ * there is also an optional loyalty counter
+ * This is the fragment displayed when the app opens
+ */
 public class AskFragment extends Fragment {
 
-    private AskViewModel mViewModel;
+    //private AskViewModel mViewModel;
     private LogViewModel logViewModel;
 
     public static AskFragment newInstance() {
         return new AskFragment();
     }
 
-    private TextTypingDisplay abilityOutput;
+    //objects for generating and displaying abilities
     private AbilityGenerator abilityGenerator;
+    private TextTypingDisplay abilityOutput;
     private TextLogDisplay abilityLog;
 
     //variables for loyalty counter
@@ -51,15 +59,14 @@ public class AskFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(AskViewModel.class);
+        //mViewModel = ViewModelProviders.of(this).get(AskViewModel.class);
+
         logViewModel = ViewModelProviders.of(getActivity()).get(LogViewModel.class);
-        // TODO: Use the ViewModel
+        abilityLog = logViewModel.getLog();
 
         TextView textBox = getActivity().findViewById(R.id.abilityOutputTextView);
         abilityOutput = new TextTypingDisplay(textBox);
         abilityGenerator = new AbilityGenerator(getContext());
-
-        abilityLog = logViewModel.getLog();
 
         //Hide loyalty counter if it is not enabled
         counterEnabled = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean("counterEnabled",false);
@@ -130,6 +137,7 @@ public class AskFragment extends Fragment {
             }
         });
 
+        //log tab
         getActivity().findViewById(R.id.logTabImage).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
@@ -137,6 +145,7 @@ public class AskFragment extends Fragment {
             }
         });
 
+        //set tab
         getActivity().findViewById(R.id.setTabImage).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
@@ -147,6 +156,7 @@ public class AskFragment extends Fragment {
     }
 
     //function to handle ability activations, fetches ability then displays it
+    //choice is 0,1 or 2 corresponds to the plus, minus and ult abilities of Urza
     private void activation(int choice){
         //Generate an ability string
         String ability = abilityGenerator.chooseAbility(choice);
@@ -157,8 +167,10 @@ public class AskFragment extends Fragment {
             ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
             viewPager.setCurrentItem(2);
         }else {
-
+            //display ability in the ability TextView
             abilityOutput.setText(ability, 1);
+
+            //add the ability to the log
             abilityLog.appendActivation(choice, ability);
         }
 
@@ -166,12 +178,16 @@ public class AskFragment extends Fragment {
 
     }
 
+    //change the value of the loyalty counter
     private void changeLoyalty(int change){
         setLoyalty(loyaltyCount + change);
     }
 
+    //set the loyalty counter to a specific value
     private void setLoyalty(int val){
+        //limit the possible values of loyaltyCount, below 0 makes no sense, above 999 and the display box won't handle it
         loyaltyCount = CustomFunction.bound(0,val,999);
+
         String newText = String.valueOf(loyaltyCount);
         loyaltyCounterView.setText(newText);
     }

@@ -5,7 +5,9 @@ import android.widget.TextView;
 
 import java.util.Date;
 
-//log for Urza ability activations
+/**
+ * log for Urza ability activations that can be added to and cleared
+ */
 public class TextLogDisplay {
 
     private TextView textBox;
