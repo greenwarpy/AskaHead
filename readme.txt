@@ -1,4 +1,4 @@
-readme.txt for AskaHead/AskUrza created 31/07/19 byu Greenwarpy
+readme.txt for AskaHead/AskUrza created 31/07/19 by Greenwarpy
 
 Ask Urza is an unofficial android companion app for use with the Magic the Gathering card "Urza Academy Headmaster".
 An "Urza Academy Headmaster" card is required to use this app as intended.
