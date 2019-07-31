@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+     The arrays in this file contain the pool of abilities the app draws on
+     Used by AbilityGenerator
+     -->
 
     <string-array name="unstablePlus">
         <item>Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.</item>

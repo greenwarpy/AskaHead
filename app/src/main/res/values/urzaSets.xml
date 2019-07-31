@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--
+         Description and Names of the ability sets in urzaAbilities.XML used in SetSelectFragment
+    -->
 
     <string name="set0">Unstable</string>
     <string name="set1">War of the Spark</string>
