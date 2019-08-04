@@ -39,222 +39,124 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="2dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/setBackImage0"
+        app:layout_constraintBottom_toBottomOf="@+id/setSelectBackImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/setSelectBackImageView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@+id/setSelectBackImageView">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="8dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/setBackImage0"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/primaryblockrectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <CheckBox
+                android:id="@+id/setCheckBox0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/setunstcheckbox"
+                android:button="@null"
+                android:checked="false"
+                app:layout_constraintBottom_toBottomOf="@+id/setBackImage0"
+                app:layout_constraintEnd_toEndOf="@+id/setBackImage0"
+                app:layout_constraintStart_toStartOf="@+id/setBackImage0"
+                app:layout_constraintTop_toTopOf="@+id/setBackImage0" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp">
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="128dp"
+                android:text="@string/set0"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/setBackImage0"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <CheckBox
-                    android:id="@+id/setCheckBox7"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/setunstcheckbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:gravity="center"
-                    android:text="@string/set0"
-                    android:textColor="@android:color/primary_text_light"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox2"
-                    app:layout_constraintStart_toEndOf="@+id/setCheckBox7"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <CheckBox
-                    android:id="@+id/setCheckBox5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@drawable/setunstcheckbox"
-                    android:button="@null"
-                    android:checked="false"
-                    tools:layout_editor_absoluteX="24dp"
-                    tools:layout_editor_absoluteY="20dp" />
-
-                <CheckBox
-                    android:id="@+id/setCheckBox2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox6"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <CheckBox
-                    android:id="@+id/setCheckBox6"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <CheckBox
-                    android:id="@+id/setCheckBox3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp">
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/setDesc0"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toEndOf="@+id/setBackImage0"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <CheckBox
-                    android:id="@+id/setCheckBox7"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/setsparkcheckbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.49" />
+            <ImageView
+                android:id="@+id/setBackImage1"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/primaryblockrectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:gravity="center"
-                    android:text="@string/set1"
-                    android:textColor="@android:color/primary_text_light"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox2"
-                    app:layout_constraintStart_toEndOf="@+id/setCheckBox7"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <CheckBox
+                android:id="@+id/setCheckBox1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/setsparkcheckbox"
+                android:button="@null"
+                android:checked="false"
+                app:layout_constraintBottom_toBottomOf="@+id/setBackImage1"
+                app:layout_constraintEnd_toEndOf="@+id/setBackImage1"
+                app:layout_constraintStart_toStartOf="@+id/setBackImage1"
+                app:layout_constraintTop_toTopOf="@+id/setBackImage1" />
 
-                <CheckBox
-                    android:id="@+id/setCheckBox5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@drawable/setunstcheckbox"
-                    android:button="@null"
-                    android:checked="false"
-                    tools:layout_editor_absoluteX="24dp"
-                    tools:layout_editor_absoluteY="20dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginBottom="100dp"
+                android:text="@string/set1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp"
 
-                <CheckBox
-                    android:id="@+id/setCheckBox2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox6"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setCheckBox1"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <CheckBox
-                    android:id="@+id/setCheckBox6"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setCheckBox3"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/setDesc1"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-                <CheckBox
-                    android:id="@+id/setCheckBox3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/custom_checkbox"
-                    android:button="@null"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/setBackImage0"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/primaryblockrectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/setSelectBackImageView"
-        app:layout_constraintStart_toStartOf="@+id/setSelectBackImageView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/setDesc0"
-        android:textColor="@android:color/primary_text_light"
-        app:layout_constraintEnd_toEndOf="@+id/setSelectBackImageView"
-        app:layout_constraintStart_toEndOf="@+id/setBackImage0"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/set0"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/setBackImage0"
-        app:layout_constraintTop_toTopOf="@+id/setBackImage0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

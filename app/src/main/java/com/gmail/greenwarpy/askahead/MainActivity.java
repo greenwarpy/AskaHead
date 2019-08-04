@@ -2,15 +2,12 @@ package com.gmail.greenwarpy.askahead;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.MenuItem;
 
 import com.gmail.greenwarpy.askahead.ui.main.SectionsPagerAdapter;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,35 +35,13 @@ public class MainActivity extends AppCompatActivity {
        return false;
     }
 
-    /*//source https://www.skoumal.com/en/android-handle-back-press-in-fragment/
     @Override
-    public void onBackPressed() {
-        List fragmentList = getSupportFragmentManager().getFragments();
-
-        boolean handled = false;
-        for(Fragment f : fragmentList) {
-            if(f instanceof BaseFragment) {
-                handled = ((BaseFragment)f).onBackPressed();
-
-                if(handled) {
-                    break;
-                }
-            }
-        }
-
-        if(!handled) {
-            super.onBackPressed();
-        }
-    }*/
-
-    @Override
-    public void onBackPressed() {
-        if(viewPager.getCurrentItem() != 1)
-        {
+    public void onBackPressed()
+    {
+        if(viewPager.getCurrentItem() != 1){
             viewPager.setCurrentItem(1);
-        } else
-        {
-            finish();
+        }else {
+            super.onBackPressed();  // optional depending on your needs
         }
     }
 
