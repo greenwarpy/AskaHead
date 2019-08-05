@@ -3,8 +3,8 @@
 
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/loyaltypush"/>
+        android:drawable="@drawable/ic_loyaltypush"/>
     <item
-        android:drawable="@drawable/loyalty"/>
+        android:drawable="@drawable/ic_loyalty"/>
 
 </selector>

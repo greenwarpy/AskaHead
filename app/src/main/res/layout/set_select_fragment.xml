@@ -63,8 +63,8 @@
 
             <CheckBox
                 android:id="@+id/setCheckBox0"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="86dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="2dp"
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="128dp"
+                android:layout_marginTop="100dp"
                 android:text="@string/set0"
                 android:textColor="@android:color/primary_text_light"
                 android:textSize="18sp"
@@ -115,8 +115,8 @@
 
             <CheckBox
                 android:id="@+id/setCheckBox1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="75dp"
+                android:layout_height="86dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="2dp"
@@ -142,7 +142,7 @@
 
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/setCheckBox1"
+                app:layout_constraintStart_toEndOf="@+id/setBackImage1"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
