@@ -62,8 +62,8 @@ public class SetSelectFragment extends Fragment implements Toolbar.OnMenuItemCli
 
         //initialise preferenceManager and checkbox arrays
         myPreferenceManager = new MyPreferenceManager(getContext());
-        boxes = new CheckBox[0]; //{getActivity().findViewById(R.id.setCheckBox0),getActivity().findViewById(R.id.setCheckBox1)};
-        backs = new ImageView[0]; //{getActivity().findViewById(R.id.setBackImage0),getActivity().findViewById(R.id.setBackImage1)};
+        boxes = new CheckBox[]{getActivity().findViewById(R.id.setCheckBox0),getActivity().findViewById(R.id.setCheckBox1)};
+        backs = new ImageView[]{getActivity().findViewById(R.id.setBackImage0),getActivity().findViewById(R.id.setBackImage1)};
 
         //set up each checkbox
         for(int i = 0; i <boxes.length;i++){

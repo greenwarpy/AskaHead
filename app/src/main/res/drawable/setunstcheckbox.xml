@@ -5,11 +5,11 @@
     <!--images modified from keystone font by Andrew Gioia-->
     <item
         android:state_checked="false"
-        android:drawable="@drawable/setunstwhite"/>
+        android:drawable="@drawable/ic_setunstwhite"/>
     <item
         android:state_checked="true"
-        android:drawable="@drawable/setunstgold"/>
+        android:drawable="@drawable/ic_setunstgreen"/>
     <item
-        android:drawable="@drawable/setunstwhite"/>
+        android:drawable="@drawable/ic_setunstwhite"/>
 
 </selector>

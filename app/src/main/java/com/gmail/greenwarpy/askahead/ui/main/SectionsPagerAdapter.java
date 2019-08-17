@@ -15,7 +15,7 @@ import com.gmail.greenwarpy.askahead.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
@@ -54,4 +54,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // Show 3 total pages.
         return 3;
     }
+
+
+
+
+
 }
