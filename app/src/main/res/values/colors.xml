@@ -6,4 +6,5 @@
     <color name="colorGoldTrim">#EFD571</color>
     <color name="colorTranspBlack">#BF000000</color>
     <color name="colorTranspWhite">#BFFFFFFF</color>
+    <color name="colorPureWhite">#FFFFFF</color>
 </resources>

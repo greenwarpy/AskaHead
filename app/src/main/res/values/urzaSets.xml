@@ -12,7 +12,7 @@
         <item>@string/set1</item>
     </array>
 
-    <string name="setDesc0">The original abilities from when Urza was printed in Unstable. They call back to planeswalker cards throughout Magics history.</string>
+    <string name="setDesc0">The original abilities from Urzas printing in Unstable. They call back to planeswalker cards throughout Magics history.</string>
     <string name="setDesc1">Released alongside War of the Spark, These abilities reference cards from the set and make use of the Amass mechanic.</string>
 
     <array name="setDescriptions">
