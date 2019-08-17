@@ -77,7 +77,7 @@ public class AbilityGenerator {
         //build an array containing strings from selected sets for the option chosen
         for(int i = 0; i < abilities.length; i++){
             //if setting for set i is enabled, add relevant abilities to array
-            if(settings.getBool("set"+ i + "enabled")){
+            if(settings.getBool("set" + i + "type" + choice + "enabled")){
                 possibleAbilities = CustomFunction.concat(possibleAbilities, abilities[i][choice]);
             }
         }
